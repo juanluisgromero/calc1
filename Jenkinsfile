@@ -16,17 +16,17 @@ pipeline {
 
             stage('construir docker') {
                 steps{
-                    sh "docker build -t localhost:5000/calculadora ."}
+                    sh "sudo docker build -t localhost:5000/calculadora ."}
                 }
 
 	   stage('subir imagen') {
                 steps{
-                    sh "docker push -t localhost:5000/calculadora"}
+                    sh " sudo docker push -t localhost:5000/calculadora"}
                 }
 
            stage('crear contenedor') {
                 steps{
-                    sh "docker run -d -p 9090:8080 --name calculador -t localhost:5000/calculadora"}
+                    sh " sudo docker run -d -p 9090:8080 --name calculador -t localhost:5000/calculadora"}
                 }
 
 
