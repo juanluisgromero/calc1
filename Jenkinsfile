@@ -21,7 +21,7 @@ pipeline {
 
 	   stage('subir imagen') {
                 steps{
-                    sh " sudo docker push -t localhost:5000/calculadora"}
+                    sh " sudo docker push  localhost:5000/calculadora"}
                 }
 
            stage('crear contenedor') {
