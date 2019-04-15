@@ -11,12 +11,12 @@ pipeline {
                 } 
             stage('build') {
                 steps{
-                    sh "./gradelw build"}
+                    sh "./gradlew build"}
                 }
 
             stage('construir docker') {
                 steps{
-                    sh "docker build -t localhost:5000/calculadora"}
+                    sh "docker build -t localhost:5000/calculadora ."}
                 }
 
 	   stage('subir imagen') {
