@@ -26,7 +26,7 @@ pipeline {
 
            stage('crear contenedor') {
                 steps{
-                    sh " sudo docker run -d -p 9090:8080 --name calculador -t localhost:5000/calculadora"}
+                    sh " sudo docker run -d -p 9090:8090 --name calculador -t localhost:5000/calculadora"}
                 }
 
 
