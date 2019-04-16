@@ -51,6 +51,10 @@ pipeline {
                 }
 
 
-            }
+            stage('crea aplica') {
+                steps{
+                    sh " sudo ansible-playbook  playbook.yml"}
+                }
+  }
 }
         
